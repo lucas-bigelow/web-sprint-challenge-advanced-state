@@ -72,14 +72,31 @@ function wheel(state = initialWheelState, action) {
   }
 }
 
-const initialQuizState = null
+const initialQuizState = {quiz: null, loaded: false };
 function quiz(state = initialQuizState, action) {
-  return state
+  switch(action.type) {
+    case actionTypes.SET_QUIZ_INTO_STATE:
+      return {
+        ...state,
+        quiz: action.payload.quiz,
+        loaded: action.payload.loaded
+      }
+    default:
+      return state;
+  }
 }
 
-const initialSelectedAnswerState = null
+const initialSelectedAnswerState = { selectedIndex: null };
 function selectedAnswer(state = initialSelectedAnswerState, action) {
-  return state
+  switch(action.type) {
+    case actionTypes.SET_SELECTED_ANSWER:
+      return {
+        ...state,
+        selectedIndex: action.payload
+      }
+    default:
+      return state;
+  }
 }
 
 const initialMessageState = ''
