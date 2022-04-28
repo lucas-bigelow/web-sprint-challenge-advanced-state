@@ -28,8 +28,8 @@ function Wheel(props) {
         <div className="cog" style={{ "--i": 5 }}></div>--i is a custom CSS property, no need to touch that nor the style object */}
       </div>
       <div id="keypad">
-        <button id="counterClockwiseBtn" onClick={handleClockwise}>Counter clockwise</button>
-        <button id="clockwiseBtn" onClick={handleCounterClockwise}>Clockwise</button>
+        <button id="counterClockwiseBtn" onClick={handleCounterClockwise}>Counter clockwise</button>
+        <button id="clockwiseBtn" onClick={handleClockwise}>Clockwise</button>
       </div>
     </div>
   )
